@@ -1,20 +1,23 @@
-Chat: 
-<br>
-<span id="chat"></span>
-<hr>
-Message:
-<br>
-<textarea id="msg" style="width:380px; height: 80px;"></textarea>
-<hr>
-<button id="send">Send Message</button>
-<script>
-  $(document).ready(function(){
-    App.chat.received = function(data){
-      $("#chat").append(data['message']+"<br>")
-    }
-    $("#send").click(function(){
-        msg = $("#msg").val()
-        App.chat.send_msg(msg)
+<div class="chat-container">
+  Welcome to SimpleChat: 
+  <br>
+  <br>
+  <span id="chat"></span>
+  <hr>
+  Message:
+  <br>
+  <textarea id="msg" style="width:380px; height: 80px;"></textarea>
+  <hr>
+  <button id="send">Send</button>
+  <script>
+    $(document).ready(function(){
+      App.chat.received = function(data){
+        $("#chat").append(data['message']+"<br>")
+      }
+      $("#send").click(function(){
+          msg = $("#msg").val()
+          App.chat.send_msg(msg)
+      })
     })
-  })
-</script>
+  </script>
+</div>
