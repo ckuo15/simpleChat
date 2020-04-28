@@ -2,10 +2,81 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.chat-container{
+#chat-container{
   color: blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("pastel.jpg");
+  height: 100vh;
+  justify-content: center;
+  background-size: cover;
+  font-family: 'Handlee', cursive;
 }
 
 #chat{
   color: black;
+}
+
+#header{
+  font-size: 20px;
+}
+
+#send {
+  background-color: rgb(0, 0, 0);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#copyright{
+  color: rgb(172, 172, 172);
+  margin-top: 15px;
+}
+
+#copyright-2{
+  color: rgb(172, 172, 172);
+  margin: 0;
+}
+
+#footer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#footer-social{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.fa-linkedin{
+  color:black;
+  font-size: 30px;
+}
+.fa-github-square{
+  color:black;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.fa-user-alt{
+  color:black;
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.fa-angellist{
+  color:black;
+  font-size: 30px;
+  margin-left: 10px;
 }
