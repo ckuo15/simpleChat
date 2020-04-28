@@ -7,7 +7,7 @@ class ChatChannel < ApplicationCable::Channel
     # Any cleanup needed when channel is unsubscribed
   end
 
-  def send_msg
+  def send_msg(data)
     ActionCable.server.broadcast "room", message:data['message']
   end
 end

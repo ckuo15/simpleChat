@@ -1,4 +1,6 @@
-Chat: <span id="chat"></span>
+Chat: 
+<br>
+<span id="chat"></span>
 <hr>
 Message:
 <br>
@@ -7,6 +9,9 @@ Message:
 <button id="send">Send Message</button>
 <script>
   $(document).ready(function(){
+    App.chat.received = function(data){
+      $("#chat").append(data['message']+"<br>")
+    }
     $("#send").click(function(){
         msg = $("#msg").val()
         App.chat.send_msg(msg)
